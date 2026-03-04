@@ -318,15 +318,6 @@
 					"hidden": false
 				}
 			]
-		},
-		{
-			"filename": "libfiledialogs.zip",
-			"origname": "libfiledialogs.zip",
-			"kind": 4,
-			"init": "",
-			"final": "",
-			"functions": [],
-			"constants": []
 		}
 	]
 }

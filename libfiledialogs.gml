@@ -1,6 +1,7 @@
 #define libfiledialogs_init
 file_copy(temp_directory + "\libfiledialogs\SDL3.dll", working_directory + "\SDL3.dll");
 global.dll_ifd_load_fonts = external_define(temp_directory + "\libfiledialogs\libfiledialogs.dll", "ifd_load_fonts", 0, ty_real, 1, ty_string);
+global.dll_ifd_get_parent = external_define(temp_directory + "\libfiledialogs\libfiledialogs.dll", "ifd_get_parent", 0, ty_string, 0);
 global.dll_ifd_set_parent = external_define(temp_directory + "\libfiledialogs\libfiledialogs.dll", "ifd_set_parent", 0, ty_real, 1, ty_string);
 global.dll_ifd_get_theme = external_define(temp_directory + "\libfiledialogs\libfiledialogs.dll", "ifd_get_theme", 0, ty_string, 0);
 global.dll_ifd_set_theme = external_define(temp_directory + "\libfiledialogs\libfiledialogs.dll", "ifd_set_theme", 0, ty_real, 1, ty_string);
