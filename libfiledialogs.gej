@@ -3,7 +3,7 @@
 	"folder": "gm82",
 	"version": "1.0.0.0",
 	"author": "Samuel Venable",
-	"date": "3/5/2026",
+	"date": "3/11/2026",
 	"license": "MIT License.",
 	"description": "Create Dear ImGui Dialog Boxes, (Both File Selection and Beyond), in GameMaker.",
 	"helpfile": "",
@@ -226,10 +226,37 @@
 					"returntype": 2
 				},
 				{
+					"name": "ifd_get_cancelable",
+					"extname": "ifd_get_cancelable",
+					"calltype": 2,
+					"helpline": "ifd_get_cancelable()",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
 					"name": "ifd_get_caption",
 					"extname": "ifd_get_caption",
 					"calltype": 2,
 					"helpline": "ifd_get_caption()",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
+					"name": "ifd_get_embedded",
+					"extname": "ifd_get_embedded",
+					"calltype": 2,
+					"helpline": "ifd_get_embedded()",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
+					"name": "ifd_get_fullscreen",
+					"extname": "ifd_get_fullscreen",
+					"calltype": 2,
+					"helpline": "ifd_get_fullscreen()",
 					"hidden": false,
 					"argtypes": [],
 					"returntype": 2
@@ -569,10 +596,43 @@
 					"returntype": 2
 				},
 				{
+					"name": "ifd_set_cancelable",
+					"extname": "ifd_set_cancelable",
+					"calltype": 2,
+					"helpline": "ifd_set_cancelable(cancel)",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
 					"name": "ifd_set_caption",
 					"extname": "ifd_set_caption",
 					"calltype": 2,
 					"helpline": "ifd_set_caption(str)",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "ifd_set_embedded",
+					"extname": "ifd_set_embedded",
+					"calltype": 2,
+					"helpline": "ifd_set_embedded(embed)",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "ifd_set_fullscreen",
+					"extname": "ifd_set_fullscreen",
+					"calltype": 2,
+					"helpline": "ifd_set_fullscreen(full)",
 					"hidden": false,
 					"argtypes": [
 						2

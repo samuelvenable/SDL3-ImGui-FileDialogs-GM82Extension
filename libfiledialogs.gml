@@ -20,6 +20,12 @@ global.dll_ifd_get_width = external_define(temp_directory + "\gm82\libfiledialog
 global.dll_ifd_set_width = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_width", 0, ty_real, 1, ty_real);
 global.dll_ifd_get_height = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_height", 0, ty_real, 0);
 global.dll_ifd_set_height = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_height", 0, ty_real, 1, ty_real)
+global.dll_ifd_get_fullscreen = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_fullscreen", 0, ty_real, 0);
+global.dll_ifd_set_fullscreen = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_fullscreen", 0, ty_real, 1, ty_real);
+global.dll_ifd_get_embedded = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_embedded", 0, ty_real, 0);
+global.dll_ifd_set_embedded = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_embedded", 0, ty_real, 1, ty_real);
+global.dll_ifd_get_cancelable = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_cancelable", 0, ty_real, 0);
+global.dll_ifd_set_cancelable = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_cancelable", 0, ty_real, 1, ty_real);
 global.dll_ifd_get_theme = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_theme", 0, ty_string, 0);
 global.dll_ifd_set_theme = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_theme", 0, ty_real, 1, ty_string);
 global.dll_ifd_easy_theming_text_color = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_easy_theming_text_color", 0, ty_real, 3, ty_real, ty_real, ty_real);
@@ -95,6 +101,24 @@ return external_call(global.dll_ifd_get_height);
 
 #define ifd_set_height
 return external_call(global.dll_ifd_set_height, real(argument0));
+
+#define ifd_get_fullscreen
+return external_call(global.dll_ifd_get_fullscreen, real(argument0));
+
+#define ifd_set_fullscreen
+return external_call(global.dll_ifd_set_fullscreen, real(argument0));
+
+#define ifd_get_embedded
+return external_call(global.dll_ifd_get_embedded, real(argument0));
+
+#define ifd_set_embedded
+return external_call(global.dll_ifd_set_embedded, real(argument0));
+
+#define ifd_get_cancelable
+return external_call(global.dll_ifd_get_cancelable, real(argument0));
+
+#define ifd_set_cancelable
+return external_call(global.dll_ifd_set_cancelable, real(argument0));
 
 #define ifd_get_theme
 return external_call(global.dll_ifd_get_theme);
