@@ -3,7 +3,7 @@
 	"folder": "gm82",
 	"version": "1.0.0.0",
 	"author": "Samuel Venable",
-	"date": "3/11/2026",
+	"date": "3/22/2026",
 	"license": "MIT License.",
 	"description": "Create Dear ImGui Dialog Boxes, (Both File Selection and Beyond), in GameMaker.",
 	"helpfile": "",
@@ -253,6 +253,24 @@
 					"returntype": 2
 				},
 				{
+					"name": "ifd_get_font_fnames",
+					"extname": "ifd_get_font_fnames",
+					"calltype": 2,
+					"helpline": "ifd_get_font_fnames()",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
+					"name": "ifd_get_font_size",
+					"extname": "ifd_get_font_size",
+					"calltype": 2,
+					"helpline": "ifd_get_font_size()",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
 					"name": "ifd_get_fullscreen",
 					"extname": "ifd_get_fullscreen",
 					"calltype": 2,
@@ -275,6 +293,15 @@
 					"extname": "ifd_get_showborder",
 					"calltype": 2,
 					"helpline": "ifd_get_showborder()",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
+					"name": "ifd_get_showinput",
+					"extname": "ifd_get_showinput",
+					"calltype": 2,
+					"helpline": "ifd_get_showinput()",
 					"hidden": false,
 					"argtypes": [],
 					"returntype": 2
@@ -655,6 +682,17 @@
 					"extname": "ifd_set_showborder",
 					"calltype": 2,
 					"helpline": "ifd_set_showborder(show)",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "ifd_set_showinput",
+					"extname": "ifd_set_showinput",
+					"calltype": 2,
+					"helpline": "ifd_set_showinput(show)",
 					"hidden": false,
 					"argtypes": [
 						2

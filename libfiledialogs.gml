@@ -10,10 +10,14 @@ file_rename(temp_directory + "\gm82\SDL3.dll", dir + "\SDL3.dll");
 // this means it can be anywhere and it'll be found for further function defs
 external_define(dir + "\SDL3.dll", "SDL_GetError", dll_cdecl, ty_string, 0);
 global.dll_ifd_load_fonts = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_load_fonts", 0, ty_real, 2, ty_string, ty_real);
+global.dll_ifd_get_font_fnames = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_font_fnames", 0, ty_string, 0);
+global.dll_ifd_get_font_size = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_font_size", 0, ty_real, 0);
 global.dll_ifd_get_parent = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_parent", 0, ty_string, 0);
 global.dll_ifd_set_parent = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_parent", 0, ty_real, 1, ty_string);
 global.dll_ifd_get_showborder = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_showborder", 0, ty_real, 0);
 global.dll_ifd_set_showborder = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_showborder", 0, ty_real, 1, ty_real);
+global.dll_ifd_get_showinput = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_showinput", 0, ty_real, 0);
+global.dll_ifd_set_showinput = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_showinput", 0, ty_real, 1, ty_real);
 global.dll_ifd_get_caption = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_caption", 0, ty_string, 0);
 global.dll_ifd_set_caption = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_set_caption", 0, ty_real, 1, ty_string);
 global.dll_ifd_get_width = external_define(temp_directory + "\gm82\libfiledialogs.dll", "ifd_get_width", 0, ty_real, 0);
@@ -78,11 +82,23 @@ external_call(global.dll_ifd_set_parent, string(window_handle()));
 #define ifd_load_fonts
 return external_call(global.dll_ifd_load_fonts, string(argument0), real(argument1));
 
+#define ifd_get_font_fnames
+return external_call(global.dll_ifd_get_font_fnames);
+
+#define ifd_get_font_size
+return external_call(global.dll_ifd_get_font_size);
+
 #define ifd_get_showborder
 return external_call(global.dll_ifd_get_showborder);
 
 #define ifd_set_showborder
 return external_call(global.dll_ifd_set_showborder, real(argument0));
+
+#define ifd_get_showinput
+return external_call(global.dll_ifd_get_showinput);
+
+#define ifd_set_showinput
+return external_call(global.dll_ifd_set_showinput, real(argument0));
 
 #define ifd_get_caption
 return external_call(global.dll_ifd_get_caption);
